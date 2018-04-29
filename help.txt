@@ -1,0 +1,41 @@
+usage: airflow [-h]
+               {trigger_dag,unpause,serve_logs,run,initdb,kerberos,scheduler,worker,flower,list_dags,pool,list_tasks,task_state,variables,connections,render,dag_state,test,webserver,version,pause,backfill,clear,task_failed_deps,upgradedb,resetdb}
+               ...
+
+positional arguments:
+  {trigger_dag,unpause,serve_logs,run,initdb,kerberos,scheduler,worker,flower,list_dags,pool,list_tasks,task_state,variables,connections,render,dag_state,test,webserver,version,pause,backfill,clear,task_failed_deps,upgradedb,resetdb}
+                        sub-command help
+    trigger_dag         Trigger a DAG run
+    unpause             Resume a paused DAG
+    serve_logs          Serve logs generate by worker
+    run                 Run a single task instance
+    initdb              Initialize the metadata database
+    kerberos            Start a kerberos ticket renewer
+    scheduler           Start a scheduler instance
+    worker              Start a Celery worker node
+    flower              Start a Celery Flower
+    list_dags           List all the DAGs
+    pool                CRUD operations on pools
+    list_tasks          List the tasks within a DAG
+    task_state          Get the status of a task instance
+    variables           CRUD operations on variables
+    connections         List/Add/Delete connections
+    render              Render a task instance's template(s)
+    dag_state           Get the status of a dag run
+    test                Test a task instance. This will run a task without
+                        checking for dependencies or recording it's state in
+                        the database.
+    webserver           Start a Airflow webserver instance
+    version             Show the version
+    pause               Pause a DAG
+    backfill            Run subsections of a DAG for a specified date range
+    clear               Clear a set of task instance, as if they never ran
+    task_failed_deps    Returns the unmet dependencies for a task instance
+                        from the perspective of the scheduler. In other words,
+                        why a task instance doesn't get scheduled and then
+                        queued by the scheduler, and then run by an executor).
+    upgradedb           Upgrade the metadata database to latest version
+    resetdb             Burn down and rebuild the metadata database
+
+optional arguments:
+  -h, --help            show this help message and exit
